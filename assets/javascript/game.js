@@ -23,6 +23,9 @@ var questions_arr = [
 	["question 20", "answer1", "answer2", "answer3", "answer4", "4"]
 ];
 
+var win_gif = ["win1.gif", "win2.gif", "win3.gif", "win4.gif"];
+var lose_gif = ["lose1.gif", "lose2.gif", "lose3.gif", "lose4.gif"];
+
 var used_question = [];
 var max_games = 11;
 var number = 25;
@@ -55,13 +58,13 @@ $("#game_div").on("click", ".butt_id" ,    function(){
 		number_of_correct_answers++; 
 		clearInterval(intervalId);
 	    clearInterval(proggress_bar_id);
-		mid_screen(1);
+		mid_screen("win");
 	} 
 	else {
 		number_of_incorrect_answers++;
 		clearInterval(intervalId);
 	    clearInterval(proggress_bar_id);
-		mid_screen(2);
+		mid_screen("lose");
 	}
 
 });
@@ -69,7 +72,7 @@ $("#game_div").on("click", ".butt_id" ,    function(){
 // **********************************
 // **********************************
 function initial_screen() {
-	var center_button = $("<div class='column-md-4 text-center'>")
+	var center_button = $("<div class='column-md-4 text-center'>");
 	var button_start = $("<button id='center' type='button' class='btn btn-primary pad_id' onclick='start_game()''>").text("Start Game.");
 	center_button.append(button_start);
 	$("#game_div").empty();
@@ -94,7 +97,23 @@ function start_game() {
 // **********************************
 // **********************************
 function mid_screen(flag) {
+	
+
 	$("#game_div").empty();
+	var outter_div = $("<div class='column-md-4 text-center'>");
+	var tittle;
+	if (flag === "win")
+		tittle = $("<h3>").text("You're Correct!!! " );
+	else if (flag === "lose") 
+		tittle = $("<h3>").text("You lose ... the answer was number " + correct_answer + ": " + current_question_answer );
+	else 
+		tittle = $("<h3>").text("You left it Unanswered.... " );
+
+	var gif_div = $('<img src='+ random_gif(flag) +' style="width:304px;height:228px;">');
+
+	outter_div.append(tittle);
+	outter_div.append(gif_div);
+	$("#game_div").append(outter_div);
 
 	setTimeout(run_game, 1000 * 2);
 }
@@ -109,8 +128,8 @@ function new_question() {
 	var question = random_question();
 	correct_answer = question[5];
 	current_question = question[0];
-	current_question_answer = question[current_question];
-	
+	current_question_answer = question[correct_answer];
+	console.log("question number: " + max_games + " " + question);
 	restart_globals();
 
 
@@ -216,7 +235,7 @@ function decrement() {
 	    clearInterval(intervalId);
 	    clearInterval(proggress_bar_id);
 	    number_of_unanswered_questions++;
-	    mid_screen(3);
+	    mid_screen("Unanswered");
 
 	  }
 }
@@ -227,4 +246,16 @@ function restart_globals() {
 	global_flag = true;
 	number = 25;
 	bar_number = 0;
+}
+
+function random_gif(flag) {
+	if (flag === "win")
+		return "assets/images/win/" + win_gif[Math.floor(Math.random()*win_gif.length)];
+	else if (flag === "lose")
+		return "assets/images/lose/" + lose_gif[Math.floor(Math.random()*lose_gif.length)];
+	else 
+		return "assets/images/lose/lose3.gif"
+	
+
+
 }
