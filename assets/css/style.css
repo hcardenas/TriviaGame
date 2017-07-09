@@ -9,8 +9,21 @@ h1, h3, p {
 	text-align: center;
 }
 
-#pad_id {
+#content {
 	margin: 5% 10%;	
+    border-style: inset;
+    border-width: 10px;
+
+}
+
+.pad_id {
+    margin: 5% 10%; 
+    width: 500px;
+}
+
+.butt_id {
+    margin: 10px 5%;
+    width: 600px;
 }
 
 #pad_progess_bar {
