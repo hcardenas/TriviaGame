@@ -2,26 +2,69 @@
 // 20 questions and answers where array[0] is question
 // array[1-4] are questions and array[5] is the answer
 var questions_arr = [
- 	["question 1", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 2", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 3", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 4", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 5", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 6", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 7", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 8", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 9", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 10", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 11", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 12", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 13", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 14", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 15", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 16", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 17", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 18", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 19", "answer1", "answer2", "answer3", "answer4", "4"],
-	["question 20", "answer1", "answer2", "answer3", "answer4", "4"]
+ 	["In Ocarina of Time, who is the Sage of Light?", 
+ 	"Zelda", "Rauru", "Sheik", "Link", "2"],
+
+	["In the Legend of Zelda Twilight Princess, what is Link's hometown?", 
+	"the Twilight Realm", "Hyrule", "Ordon", "Kakariko Village", "4"],
+
+	["How many years passed between Ocarina of Time and Twilight Princess", 
+	"It was never completley determined", "a century", "a decade", "a millenia", "2"],
+
+	["In The Legend of Zelda Ocarina of Time, what is the very first song you learn?", 
+	"Zelda's Lullaby", "Song of Storms", "Prelude of Light", "Melody of Shadow", "1"],
+
+	["What year did the very first Legend of Zelda game come out?", 
+	"2006", "1918", "1988", "1986", "4"],
+
+	["In The Legend of Wind Waker the Triforce of Courage was spilt into how many pieces?", 
+	"7", "8", "20", "3", "2"],
+
+	["How many (and which) zelda games were released for the Nintendo DS/DSi?", 
+	"2 - Phantom Houglass, Spirit Tracks", 
+	"5 - Twilight Princess, Majora's Mask, Minish Cap, Oracle of Seasons, Oracle of Ages", 
+	" 1 - The Legend of Zelda", "none", "4"],
+
+	["What year was The Legend of Zelda Ocarina of Time remade for Gamecube?", 
+	"2005", "2004", "2003", "2002", "4"],
+
+	["In The Legend of Zelda Four Swords Adventures, what colors are Link's tunics?", 
+	"they are all Green, DUH!", "Lime, Crimson, Perrywinkle, Gold", 
+	"Yellow, Orange, White, Pink", "Green, Red, Blue, Purple", "4"],
+
+	["In The Legend of Zelda Ocarina of Time (after the Master Sword has been drawn) you explore the Ice Cavern in Zora's Fountain to find what extremley useful item?",
+	 "Hookshot", "Bow and Arrow", "Iron Boots", "Boomerang", "3"],
+
+	["What inspired Shigeru Miyamoto to create The Legend of Zelda???",
+	 "exploring caves by lantern light as a child", "learning the ways of the sword in his younger days", 
+	 "he just thought of it and dedicated his life to making it a reality", "all the above", "4"],
+
+	["Which Zelda game was supposedly first in chronological order?",
+	 "Twilight Princess", "Skyward Sword", "Ocarina of Time", "Majora's Mask", "2"],
+
+	["Which Zelda game was supposedly second in chronological order?",
+	 "Twilight Princess", "Skyward Sword", "Ocarina of Time", "Phantom Hourglass", "4"],
+
+	["What was the first dungeon in the Ocarina of Time?",
+	 "Din's Cavern", "The Great Deku Tree", "Goron City", "Hyrule Castle", "2"],
+
+	["How many different tunics could you wear in Ocarina of Time?",
+	 "1", "2", "3", "4", "3"],
+
+	["What item did you receive in the third dungeon in of Ocarina of time?",
+	 "Bombs", "Navi voice canceller", "Bow and Arrow", "Boomerand", "4"],
+
+	["In Twilight Princess, what animal can Link turn into?",
+	 "Wolf", "Monkey", "Horse", "Fish", "1"],
+
+	["What was Zelda in Skyward Sword?",
+	 "Princess", "Link's childhood friend", "no one of importance", "none of the above", "2"],
+
+	["What was the name of the boss in the Fire Temple of Ocarina of Time?",
+	 "Fire demon", "Depth Charge", "Volvagia", "King Dodongo", "3"],
+
+	["There are three parts of the Triforce: Power, Wisdom, and what?",
+	 "Spirit", "valor", "Courage", "None of the above", "3"]
 ];
 
 // arrays of gif to display
