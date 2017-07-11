@@ -71,6 +71,10 @@ var questions_arr = [
 var win_gif = ["win1.gif", "win2.gif", "win3.gif", "win4.gif", "win5.gif", "win6.gif", "win7.gif"];
 var lose_gif = ["lose1.gif", "lose2.gif",  "lose4.gif", "lose5.gif", "lose6.gif", "lose7.gif"];
 
+var win_arr_len = win_gif.length -1;
+var lose_arr_len = lose_gif.length-1;
+
+
 // global variables to be used 
 var used_question = [];
 var max_games = 11;
@@ -336,10 +340,24 @@ function restart_globals() {
 // but always sends the same gif if unaswered
 // **********************************
 function random_gif(flag) {
-	if (flag === "win")
-		return "assets/images/win/" + win_gif[Math.floor(Math.random()*win_gif.length)];
-	else if (flag === "lose")
-		return "assets/images/lose/" + lose_gif[Math.floor(Math.random()*lose_gif.length)];
+	if (flag === "win"){
+		//return "assets/images/win/" + win_gif[Math.floor(Math.random()*win_gif.length)];
+		if (win_arr_len < 0) {
+			win_arr_len = win_gif.length -1;
+		}
+
+		return "assets/images/win/" + win_gif[win_arr_len--]; 
+
+
+	}
+	else if (flag === "lose"){
+		//return "assets/images/lose/" + lose_gif[Math.floor(Math.random()*lose_gif.length)];
+		if (lose_arr_len < 0) {
+			lose_arr_len = lose_gif.length - 1;
+		}
+		console.log(lose_arr_len);
+		return "assets/images/lose/" + lose_gif[lose_arr_len--];
+	}
 	else 
 		return "assets/images/lose/lose3.gif"
 }
